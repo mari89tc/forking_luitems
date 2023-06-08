@@ -1,60 +1,85 @@
 ---
 const { text, href = "/", id = "" } = Astro.props;
 ---
-
-<!-- <button id={id}> -->
-  <a id={id} href={href}>
+<div class="button">
+   <a id={id}  href={href}>
     <p>{text}</p>
   </a>
-<!-- </button> -->
+</div>
+ 
+  
 
 <style>
-  a {
+  .button {
     background-color: #fcf6ac;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 32px;
     width: 550px;
     border: solid 4px #fcf6ac;
-    color: #000000;
-    text-decoration: none;
+    padding: 10px;
+    align-items: center;
+    justify-items: center;
+    display: grid;
   }
-  a:hover {
-    background-color: #000000;
+  .button a {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 20px;
     line-height: 32px;
+    color: #000000;
+    text-decoration: none;
+    place-self: center;
+    justify-self: center;
+  }
+  .button:hover {
+    background-color: #000000;
     width: 550px;
     border: solid 4px #000000;
+    padding: 10px;
+    align-items: center;
+    justify-items: center;
+  }
+  .button:hover a {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
     color: #fcf6ac;
     text-decoration: none;
+    place-self: center;
+    justify-self: center;
   }
   @media (max-width: 700px) {
-    a {
+    .button {
       background-color: #fcf6ac;
-      font-family: "Roboto", sans-serif;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 32px;
       width: 350px;
       border: solid 4px #fcf6ac;
       color: #000000;
-      padding: 20px;
-      text-decoration: none;
+      padding: 10px;
     }
-    a:hover {
-      background-color: #000000;
+    .button a {
       font-family: "Roboto", sans-serif;
       font-weight: 400;
       font-size: 16px;
       line-height: 32px;
+      color: #000000;
+      text-decoration: none;
+      justify-self: center;
+    align-self: center;
+    }
+    .button:hover {
+      background-color: #000000;
       width: 350px;
       border: solid 4px #000000;
+      padding: 10px;
+    }
+   .button:hover a {
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 32px;
       color: #fcf6ac;
-      padding: 20px;
       text-decoration: none;
+      justify-self: center;
+    align-self: center;
     }
   }
 </style>
