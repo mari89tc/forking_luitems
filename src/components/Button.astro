@@ -2,14 +2,14 @@
 const { text, href = "/", id = "" } = Astro.props;
 ---
 
-<button id={id}>
-  <a href={href}>
+<!-- <button id={id}> -->
+  <a id={id} href={href}>
     <p>{text}</p>
   </a>
-</button>
+<!-- </button> -->
 
 <style>
-  button {
+  a {
     background-color: #fcf6ac;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -20,7 +20,7 @@ const { text, href = "/", id = "" } = Astro.props;
     color: #000000;
     text-decoration: none;
   }
-  button:hover {
+  a:hover {
     background-color: #000000;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -32,7 +32,7 @@ const { text, href = "/", id = "" } = Astro.props;
     text-decoration: none;
   }
   @media (max-width: 700px) {
-    button {
+    a {
       background-color: #fcf6ac;
       font-family: "Roboto", sans-serif;
       font-weight: 400;
@@ -44,7 +44,7 @@ const { text, href = "/", id = "" } = Astro.props;
       padding: 20px;
       text-decoration: none;
     }
-    button:hover {
+    a:hover {
       background-color: #000000;
       font-family: "Roboto", sans-serif;
       font-weight: 400;
