@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+img {
+  max-width: 100%;
+}
+
+@media (min-width: 600px) {
+  #hero_desk {
+    display: block;
+  }
+
+  #hero_mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  #hero_desk {
+    display: none;
+  }
+
+  #hero_mobile {
+    display: block;
+  }
+}
+
+/* Fonte til desktop */
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 150px;
+  line-height: 150px;
+  text-transform: uppercase;
+}
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 80px;
+  text-transform: uppercase;
+}
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+}
+h5 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+button a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000000;
+  text-decoration: none;
+}
+button:hover a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #fcf6ac;
+  text-decoration: none;
+}
+/* Fonte til mobil */
+@media (max-width: 700px) {
+  h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 80px;
+  }
+  h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+  }
+  h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+  }
+  h4 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  h5 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  button a {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    text-decoration: none;
+  }
+  button a:hover {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fcf6ac;
+    text-decoration: none;
+  }
+}

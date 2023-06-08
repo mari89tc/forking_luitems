@@ -1,0 +1,42 @@
+---
+import Form from "../components/Form.astro";
+import Main from "../layouts/Main.astro";
+import Products from "../components/Products.astro";
+---
+
+<Main title="Products">
+  <section>
+    <h2>PRODUCTS</h2>
+    <article class="grid_1">
+      <Products />
+    </article>
+    <Form />
+  </section>
+</Main>
+
+<style>
+  section {
+    display: grid;
+  }
+  h2 {
+    justify-self: center;
+    align-self: center;
+  }
+  .grid_1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 400px));
+    gap: 40px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-self: center;
+  }
+  @media (max-width: 600px) {
+    .grid_1 {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin: 10px;
+      gap: 20px;
+    }
+  }
+</style>

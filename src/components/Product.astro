@@ -1,0 +1,29 @@
+---
+const { data } = Astro.props;
+---
+
+<article>
+  <a href={"/product/" + data.slug}><img src={"/productlist/" + data.img + "-front.webp"} ' alt={data.name} width="100%" height="auto" /></a>
+  <div class="grid_1">
+    <h4>{data.name}</h4>
+    <h4>{data.price} DKK</h4>
+  </div>
+</article>
+
+<style>
+  .grid_1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -20px;
+  }
+  @media (max-width: 600px) {
+    article img {
+      width: 100%;
+    }
+    .grid_1 {
+      display: flex;
+      justify-content: space-between;
+      margin-top: -10px;
+    }
+  }
+</style>

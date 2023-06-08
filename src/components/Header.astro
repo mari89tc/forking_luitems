@@ -1,0 +1,193 @@
+<header>
+  <div id="mainmenu">
+    <slot name="header-slot" />
+    <div class="logo">
+      <a href="/"><img src="/footer/Logo.svg" alt="logo" width="100%" height="100%" /></a>
+    </div>
+
+    <button id="burger-menu">
+      Menu
+      <span></span>
+    </button>
+
+    <nav id="menu">
+      <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/products">PRODUCTS</a></li>
+        <li><a href="/about">ABOUT LÜ</a></li>
+        <li><a href="/projects">PROJECTS</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script src="../scripts/burger.js"></script>
+
+<style>
+  #mainmenu {
+    display: grid;
+    background-color: #fcf6ac;
+  }
+  #mainmenu > * {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .logo {
+    width: 5%;
+    padding: 7px;
+    z-index: 3;
+  }
+  #burger-menu {
+    text-indent: -9999px;
+    display: none;
+    border: none;
+    background: transparent;
+    margin: 25px;
+    cursor: pointer;
+    height: 28px;
+    width: 28px;
+    position: relative;
+    z-index: 2;
+  }
+  #burger-menu {
+    display: block;
+    position: absolute;
+    right: 25px;
+  }
+  #burger-menu span,
+  #burger-menu span:before,
+  #burger-menu span:after {
+    background: #000000;
+    display: block;
+    height: 4px;
+    opacity: 1;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+    content: "";
+  }
+  #burger-menu span:before {
+    left: 0px;
+    top: -10px;
+    width: 55px;
+  }
+  #burger-menu span {
+    right: 0px;
+    top: 13px;
+    width: 55px;
+  }
+  #burger-menu span:after {
+    left: 0px;
+    top: 10px;
+    width: 55px;
+  }
+  #burger-menu.close span:before {
+    top: 0px;
+    transform: rotate(65deg);
+    width: 65px;
+    background: #000000;
+  }
+  #burger-menu.close span {
+    transform: rotate(-32deg);
+    top: 13px;
+    width: 65px;
+    background: #000000;
+  }
+  #burger-menu.close span:after {
+    top: 0px;
+    left: 0;
+    transform: rotate(65deg);
+    opacity: 0;
+    width: 0;
+    background: #000000;
+  }
+  #menu {
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 280px;
+    transition: all 0.3s ease-in-out;
+  }
+  #menu.overlay {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 100px;
+    background: #fcf6ac;
+  }
+  .logo.overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+  #menu ul {
+    padding: 0;
+  }
+  #menu li {
+    list-style: none;
+    display: initial;
+  }
+  #menu a {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 100px;
+    color: #000000;
+    display: block;
+    margin-bottom: 30px;
+    text-decoration: none;
+  }
+  #menu a:hover {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 100px;
+    color: #000000;
+    display: block;
+    margin-bottom: 30px;
+    text-decoration: underline 4px solid #000000;
+  }
+  @media (max-width: 600px) {
+    .logo {
+      width: 12%;
+      z-index: 3;
+    }
+    #menu {
+      padding-left: 70px;
+    }
+    #burger-menu {
+      display: block;
+      position: fixed;
+      right: 5px;
+      top: -10px;
+    }
+    #menu a {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 70px;
+      color: #000000;
+      display: block;
+      margin-bottom: 30px;
+      text-decoration: none;
+    }
+    #menu a:hover {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 70px;
+      color: #000000;
+      display: block;
+      margin-bottom: 30px;
+      text-decoration: underline 4px solid #000000;
+    }
+  }
+</style>

@@ -1,0 +1,38 @@
+---
+const { type = "" } = Astro.props;
+const { title } = Astro.props;
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import "../styles/global.css";
+---
+
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <!-- <title>LÜ ITEMS</title> -->
+    <title>{title}</title>
+    <meta name="robots" content="noindex" />
+  </head>
+  <body class={title} class={type}>
+    <div class="wrapper">
+      <Header />
+      <slot />
+      <Footer />
+      <script src="../scripts/login.js"></script>
+    </div>
+  </body>
+</html>
+
+<style>
+  .wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+    position: relative;
+  }
+</style>

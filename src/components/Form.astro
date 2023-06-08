@@ -1,0 +1,148 @@
+---
+import Button from "./Button.astro";
+---
+
+<section>
+  <h3>CUSTOMIZE YOUR OWN LÜ ITEM HERE</h3>
+  <form class="forms" name="request">
+    <div>
+      <label for="title">ITEM</label>
+      <input id="title" name="title" type="text" required />
+    </div>
+    <div>
+      <label for="title">COLOUR</label>
+      <input id="title" name="title" type="text" required />
+    </div>
+    <div>
+      <label for="email">MAIL</label>
+      <input id="email" type="text" name="email" />
+    </div>
+    <div>
+      <label for="long">SIZE, LENGTH, OTHER PREFERENCES</label>
+      <textarea id="long" name="long" rows="6" required></textarea>
+    </div>
+    <div class="sendbut">
+      <Button text="SEND REQUEST" />
+    </div>
+  </form>
+</section>
+
+<style>
+  section {
+    display: grid;
+    padding-top: 60px;
+    padding: 10px;
+  }
+  section h3 {
+    justify-self: center;
+    align-self: center;
+  }
+  section form {
+    justify-self: center;
+    align-self: center;
+  }
+  section div {
+    padding-top: 25px;
+  }
+  input {
+    width: 550px;
+    padding: 20px;
+    background-color: #ffffff;
+    text-decoration: none;
+    color: #000000;
+    border: #000000;
+    outline: 2px solid #000000;
+  }
+  input:focus {
+    width: 550px;
+    padding: 20px;
+    background-color: #ffffff;
+    text-decoration: none;
+    color: #000000;
+    border: #000000;
+    outline: 4px solid #000000;
+  }
+  label {
+    line-height: 45px;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    display: block;
+  }
+  textarea {
+    width: 550px;
+    padding: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: #ffffff;
+    text-decoration: none;
+    color: #000000;
+    border: #000000;
+    outline: 2px solid #000000;
+  }
+  textarea:focus {
+    width: 550px;
+    padding: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: #ffffff;
+    text-decoration: none;
+    color: #000000;
+    border: #000000;
+    outline: 4px solid #000000;
+  }
+  .sendbut {
+    padding-top: 50px;
+  }
+  @media (max-width: 600px) {
+    input {
+      width: 350px;
+      padding: 20px;
+      background-color: #ffffff;
+      text-decoration: none;
+      color: #000000;
+      border: #000000;
+      outline: 2px solid #000000;
+    }
+    input:focus {
+      width: 350px;
+      padding: 20px;
+      background-color: #ffffff;
+      text-decoration: none;
+      color: #000000;
+      border: #000000;
+      outline: 4px solid #000000;
+    }
+    label {
+      line-height: 45px;
+      color: #000000;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 25pt;
+      display: block;
+    }
+    textarea {
+      width: 350px;
+      padding: 20px;
+      background-color: #ffffff;
+      text-decoration: none;
+      color: #000000;
+      border: #000000;
+      outline: 2px solid #000000;
+    }
+    textarea:focus {
+      width: 350px;
+      padding: 20px;
+      background-color: #ffffff;
+      text-decoration: none;
+      color: #000000;
+      border: #000000;
+      outline: 4px solid #000000;
+    }
+  }
+</style>
