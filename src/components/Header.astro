@@ -51,9 +51,16 @@
   }
   #burger-menu {
     display: block;
-    position: absolute;
+    position: fixed;
     right: 25px;
   }
+  @media (min-width:1500px) {
+    #burger-menu {
+    position: absolute;
+
+  }
+  } 
+
   #burger-menu span,
   #burger-menu span:before,
   #burger-menu span:after {
