@@ -4,6 +4,7 @@ import Button from "./Button.astro";
 
 <section>
   <h3>CUSTOMIZE YOUR OWN LÜ ITEM HERE</h3>
+  <p>IT IS POSSIBLE TO PLACE A CUSTTOMMADE ORDER. FEEL FREE TO VISIT MY INSTAGRAM PROFILE TO EXPLORE SOME OF MY STYLES, THAT ARE NOT AVAILABLE ON THE WEBSITE.</p>
   <form class="forms" name="request">
     <div>
       <label for="title">ITEM</label>
@@ -36,6 +37,12 @@ import Button from "./Button.astro";
   section h3 {
     justify-self: center;
     align-self: center;
+    padding-top: 100px;
+  }
+  section p {
+    justify-self: center;
+    align-self: center;
+    width: 700px;
   }
   section form {
     justify-self: center;
@@ -99,6 +106,11 @@ import Button from "./Button.astro";
     padding-top: 50px;
   }
   @media (max-width: 600px) {
+    section p {
+      justify-self: center;
+      align-self: center;
+      width: 350px;
+    }
     input {
       width: 350px;
       padding: 20px;
